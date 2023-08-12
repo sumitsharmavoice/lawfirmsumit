@@ -7,13 +7,21 @@ import Highlight1 from "../components/Highlight1";
 import MainSlider from "../components/MainSlider";
 import ScrollButton from "../components/ScrollButton";
 import "../components/style.css"
-
+import { useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 export default function () {
+
+    var theme = useTheme();
+    const sm = useMediaQuery(theme.breakpoints.down('sm'));
+    const md = useMediaQuery(theme.breakpoints.down('md'));
+    const lg = useMediaQuery(theme.breakpoints.down('lg'));
+
+
     const [fix, setFix] = useState(false)
 
     const setFixed = () => {
-        if (window.scrollY >= 1 ) 
+        if (window.scrollY >= 1 && sm==false ) 
         { setFix(true) }
         else 
          { setFix(false) }

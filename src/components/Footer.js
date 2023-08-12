@@ -3,12 +3,12 @@ import "./style.css"
 import { Grid, Link, } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { BsInstagram, BsLinkedin, BsFacebook } from 'react-icons/bs'
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Footer() {
     // const matches = useMediaQuery('(max-width:800px)');
-
+  var navigation=useNavigate()
 
     return (
         <div class='footer-maincontainer'>
@@ -44,7 +44,7 @@ function Footer() {
                             Quick Links
                         </div>
                         <div class='linkbox'>
-                            <Link class='link' color="inherit" >Home</Link>
+                            <Link class='link' color="inherit" onClick={()=>navigation("/")} >Home</Link>
                             <Link class='link' color="inherit" >About</Link>
                             <Link class='link' color="inherit" >Services</Link>
                             <Link class='link' color="primary" >Contact Us</Link>

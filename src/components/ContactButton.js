@@ -1,10 +1,12 @@
 import React from 'react';
 import "./style.css";
+import { useNavigate } from 'react-router-dom';
 
 function ContactButton() {
-
+  var navigation=useNavigate();
     const handleClick = () => {
         alert("Open Popup")
+        navigation("/random")
     }
     return (
         <div className='cbtn-maincontainer'>

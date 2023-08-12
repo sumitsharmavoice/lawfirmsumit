@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./screens/Home";
 import ScrollButton from "./components/ScrollButton";
-import ContactPopup from "./components/ContactPopup";
+import Random from "./screens/Random";
+import ContactPage from "./components/ContactPage";
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
         <Routes>
           <Route element={<Home />} path="/" />
           <Route element={<ScrollButton />} path="/scrollbutton" />
-          <Route element={<ContactPopup />} path="/contactpopup" />
+          {/* <Route element={<ContactPage />} path="/contactpopup" /> */}
+          <Route element={<Random />} path="/random" />
 
         </Routes>
       </Router>
